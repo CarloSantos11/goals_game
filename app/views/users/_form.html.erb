@@ -26,6 +26,25 @@
     <%= form.number_field :points %>
   </div>
 
+
+  <%= form.fields_for :goals, user.goals do |goal_form| %>
+    <div class="field">
+      <%= goal_form.label :title %>
+      <%= goal_form.text_field :title %>
+    </div>
+
+    <div class="field">
+      <%= goal_form.label :description %>
+      <%= goal_form.text_field :description %>
+    </div>
+
+    <div class="field">
+      <%= goal_form.label :points %>
+      <%= goal_form.number_field :points %>
+    </div>
+  <% end %>
+
+
   <div class="actions">
     <%= form.submit %>
   </div>

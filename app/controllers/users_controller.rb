@@ -16,6 +16,7 @@ class UsersController < ApplicationController
   # GET /users/new
   def new
     @user = User.new
+    @user.goals.build 
   end
 
   # GET /users/1/edit
@@ -70,6 +71,7 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:email, :name, :points)
+      params.require(:user)
+        .permit(:email, :name, :points, goals_attributes: %i[id title description points])
     end
 end
