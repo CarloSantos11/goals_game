@@ -25,7 +25,7 @@ class GoalsController < ApplicationController
   # POST /goals.json
   def create
     @goal = Goal.new(goal_params)
-
+    
     respond_to do |format|
       if @goal.save
         format.html { redirect_to @goal, notice: 'Goal was successfully created.' }
@@ -61,6 +61,17 @@ class GoalsController < ApplicationController
     end
   end
 
+  def complete
+    @current_goal = Goal.first
+    puts "before: #{@current_goal.user.points}"
+    
+    binding.pry
+    
+    @current_goal.user.update_score(@current_goal.points)
+    puts "after: #{@current_goal.user.points}"
+
+  end
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_goal

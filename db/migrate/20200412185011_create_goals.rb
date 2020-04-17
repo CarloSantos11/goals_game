@@ -3,7 +3,7 @@ class CreateGoals < ActiveRecord::Migration[6.0]
     create_table :goals do |t|
       t.string :title
       t.text :description
-      t.integer :points
+      t.integer :points, default: 50
       t.belongs_to :user, null: false, foreign_key: true
 
       t.timestamps
