@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2020_04_12_185011) do
     t.string "title"
     t.text "description"
     t.integer "points", default: 50
+    t.boolean "completed", default: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

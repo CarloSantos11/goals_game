@@ -61,15 +61,15 @@ class GoalsController < ApplicationController
     end
   end
 
+  # How do I attach this method to a form
   def complete
-    @current_goal = Goal.first
-    puts "before: #{@current_goal.user.points}"
-    
-    binding.pry
-    
+    @current_goal = Goal.find(params[:goal_id])
     @current_goal.user.update_score(@current_goal.points)
-    puts "after: #{@current_goal.user.points}"
-
+    @current_goal.completed = true
+    @current_goal.user.save!
+    @current_goal.save!
+    
+    redirect_to user_path(@current_goal.user)
   end
   
   private

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :goals
   resources :users do 
     resources :goals do
       get 'complete' => 'goals#complete'

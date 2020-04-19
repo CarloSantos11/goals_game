@@ -10,6 +10,8 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @completed_goals = @user.goals.where(completed: true)
+    @incomplete_goals = @user.goals.where(completed: false) # refactor
     @goals = @user.goals    
   end
 
