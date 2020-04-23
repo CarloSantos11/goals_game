@@ -29,3 +29,19 @@ Each week, teammates ante up their goals. Each goal is worth a certain amount of
   - complete_goal method
   - complete_goal system test
   - reverse_completion method
+
+### Classes
+
+- Users
+  - name
+  - email
+  - points
+
+- Goal
+  - title 
+  - description
+  - points
+
+- Envelope
+  - paid_off
+  - total_value
