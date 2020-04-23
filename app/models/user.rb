@@ -9,12 +9,10 @@ class User < ApplicationRecord
     self.points += additional_points
   end
 
-  # def mark_complete(goal)
+  def reverse_score(deduction)
+    self.points -= deduction
+  end
 
-  # end
-
-  # def mark_incomplete(goal)
-  # end
 end
 
 

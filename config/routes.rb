@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :users do 
     resources :goals do
       get 'complete', to: 'goals#complete'
+      get 'reverse', to: 'goals#reverse_completion'
     end
   end
   match 'users/:id', to: 'users#show', via: :post  # what is this for?

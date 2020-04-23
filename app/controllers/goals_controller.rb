@@ -72,6 +72,17 @@ class GoalsController < ApplicationController
     
     redirect_to user_path(@current_goal.user)
   end
+
+  def reverse_completion
+    @current_goal = Goal.find(params[:goal_id])
+    @current_goal.user.reverse_score(@current_goal.points)
+    
+    @current_goal.completed = false
+    @current_goal.user.save!
+    @current_goal.save!
+    
+    redirect_to user_path(@current_goal.user)
+  end
   
   private
     # Use callbacks to share common setup or constraints between actions.

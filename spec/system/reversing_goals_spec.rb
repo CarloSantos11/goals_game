@@ -20,11 +20,11 @@ As user Carlo, given that he has 0 points and 2 incomplete goals with 100 points
 
 require "rails_helper"
 
-RSpec.describe "Completing a goal", :type => :system do
+RSpec.describe "Reversing a goal", :type => :system do #left off editing this line
   context "when a user has two incomplet goals totaling 100pts" do 
     let!(:user) { create(:user) }
-    let!(:goal_1) { create(:goal, points: 40, user: user) }
-    let!(:goal_2) { create(:goal, points: 60, user: user) }
+    let!(:goal_1) { create(:goal, points: 40, complete: true, user: user) }
+    let!(:goal_2) { create(:goal, points: 60, complete: true, user: user) }
 
     it "Adds points from goal to a user when they complete a goal" do
         visit user_path(user)
@@ -35,3 +35,4 @@ RSpec.describe "Completing a goal", :type => :system do
     end
   end
 end
+

@@ -1,24 +1,31 @@
-# README
+# Level Up
+## Master Mind Group
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a game designed to help gamify the idea of completing goals. The game is meant to be played by two or more people.
 
-Things you may want to cover:
+How the game works. 
 
-* Ruby version
+Teamates will work to win "envelopes"(The term evelopes may change in the future. Ex: jackpot, prize, target). 
 
-* System dependencies
+You win envelopes by buying out the envelope. Each envelope has a price. Ex:
 
-* Configuration
+1) Floor level Concert Seats: $1,000
+2) Trip to Venice: $4,000
+3) New Car: $36,000
 
-* Database creation
+You put money towards buying out the envelope by winning the pot or the weekly winnings. (The organizers of the game will decide the value of the pot. Ex: every player antes up $200 a week. Or maybe a percentage of allowance).
 
-* Database initialization
+Each week, teammates ante up their goals. Each goal is worth a certain amount of points. Whoever has the most points at the end of the week gets the pot or the weekly winnings.
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Where am I at currently:
+- ToDo:
+  - need to finish system test for reversing  the complete goal
+    - use system test for completing goals as example
+  - add user sessions
+  - add envelopes model
+  - work on styling
+    - think about using figma to create some views
+- Done:
+  - complete_goal method
+  - complete_goal system test
+  - reverse_completion method
