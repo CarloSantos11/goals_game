@@ -6,9 +6,9 @@ FactoryBot.define do
     points { 0 }
   end
 
-  after(:create) do |user|
-    goal_1 = create(:goal, user: user)
-    goal_2 = create(:goal, user: user)
-    user.goals = [goal_1, goal_2]
-  end
+  # after(:create) do |user|
+  #   goal_1 = create(:goal, user: user)
+  #   goal_2 = create(:goal, user: user)
+  #   user.goals = [goal_1, goal_2]
+  # end
 end

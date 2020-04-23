@@ -5,6 +5,7 @@ class User < ApplicationRecord
                                    # the parent
   # PASS
   def update_score(additional_points)
+    
     self.points += additional_points
   end
 

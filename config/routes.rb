@@ -2,9 +2,10 @@ Rails.application.routes.draw do
   resources :goals
   resources :users do 
     resources :goals do
-      get 'complete' => 'goals#complete'
+      get 'complete', to: 'goals#complete'
     end
   end
-  match 'users/:id', to: 'users#show', via: :post  
+  match 'users/:id', to: 'users#show', via: :post  # what is this for?
+  
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

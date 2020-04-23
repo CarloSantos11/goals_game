@@ -2,13 +2,15 @@ require 'rails_helper'
 
 RSpec.describe UsersController, type: :controller do
   describe '#show' do
-    let(:user) { FactoryBot.create :user }
+    let!(:user) { create(:user) }
+    let!(:goal_1) { create(:goal, points: 40, user: user) }
+    let!(:goal_2) { create(:goal, points: 60, user: user) }
     context "after creating new user" do
       it 'get the goals for this user' do
-        # the user that is in the test DB:
+
         goals = user.goals.to_a
 
-        # allow(controller).to receive(:show)
+
         expect(goals[0].title).to eq("Sample goal")
         expect(goals[1].title).to eq("Sample goal")
       end

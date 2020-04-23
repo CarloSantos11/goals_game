@@ -65,6 +65,7 @@ class GoalsController < ApplicationController
   def complete
     @current_goal = Goal.find(params[:goal_id])
     @current_goal.user.update_score(@current_goal.points)
+    
     @current_goal.completed = true
     @current_goal.user.save!
     @current_goal.save!
