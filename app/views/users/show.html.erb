@@ -32,7 +32,7 @@
       </thead>
 
       <tbody>
-        <% @incomplete_goals.each do |goal| %>
+        <% @incomplete_goals.each_with_index do |goal, index| %>
           <tr id=<%= "incomplete_goal_#{index}" %>>
             <td><%= goal.title %></td>
             <td><%= goal.description %></td>
