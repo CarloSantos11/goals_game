@@ -24,7 +24,8 @@ Each week, teammates ante up their goals. Each goal is worth a certain amount of
   - add user sessions
   - add envelopes model
   - work on styling
-    - think about using figma to create some views
+    - currently using draw.io for views https://drive.google.com/file/d/1fvSpTo7TmMSx-tHh3qfQBkRlmijrFX_u/view?usp=sharing
+    - still flushing out views
 - Done:
   - complete_goal method
   - complete_goal system test
